@@ -1,0 +1,17 @@
+name: 'It's your world'
+description: 'takes an input and outputs a string'
+inputs:
+  name-to-use:  # id of input
+    description: 'name to use'
+    required: true
+    default: 'everyone'
+outputs:
+  final-string:
+    description: "string we'll use"
+    value: ${{ steps.string-generator.outputs.final-string }}
+runs:
+  using: "composite"
+  steps:
+    - id: string-generator
+      run: echo "final-string=$(It's ${{ inputs.name-to-use }}'s world!')" >> $GITHUB_OUTPUT
+      shell: bash
