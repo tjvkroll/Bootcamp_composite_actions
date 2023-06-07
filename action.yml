@@ -1,4 +1,4 @@
-name: 'It's your world'
+name: 'Its your world'
 description: 'takes an input and outputs a string'
 inputs:
   name-to-use:  # id of input
