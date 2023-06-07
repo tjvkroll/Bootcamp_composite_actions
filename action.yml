@@ -13,4 +13,4 @@ runs:
   using: "composite"
   steps:
     - id: string-generator
-      run: final-string="It's ${{ inputs.name-to-use }}'s world!"
+      uses: final-string="It's ${{ inputs.name-to-use }}'s world!"
