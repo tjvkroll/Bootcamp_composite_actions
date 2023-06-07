@@ -13,5 +13,5 @@ runs:
   using: "composite"
   steps:
     - id: string-generator
-      run: echo "final-string=$(It's ${{ inputs.name-to-use }}'s world!')" >> $GITHUB_OUTPUT
+      run: echo "final-string=It's ${{ inputs.name-to-use }}'s world!" >> $GITHUB_OUTPUT
       shell: bash
